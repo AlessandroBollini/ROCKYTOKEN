@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Custom Wallet</title>
+</head>
+
+<body>
+    <h1>Here you find the credential of the wallet we made for you</h1>
+    <p>Address: <%=wallet.address%>
+    </p>
+    <p>Public key: <%=wallet.publicKey%>
+    </p>
+    <p>Private key: <%=wallet.privateKey%>
+    </p>
+    <p>Seed Phrase: <%=wallet.seedPhrase%>
+    </p>
+
+    <h1>You can also view items on your wallet at the following link:</h1>
+    <a href="//testnets.opensea.io/<%=wallet.address%>"> here</a>
+    <h1>Click here to return to the landing page:</h1>
+    <button onclick="window.location.href='/<%=wallet.address%>';">Here</button>
+</body>
+
+</html>

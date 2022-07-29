@@ -1,0 +1,20 @@
+{
+  "name": "setupnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "pg": "^8.7.3",
+    "qrcode": "^1.5.1",
+    "sequelize": "^6.21.3"
+  }
+}

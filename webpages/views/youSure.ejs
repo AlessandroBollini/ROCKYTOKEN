@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Do you confirm?</title>
+</head>
+
+<body>
+    <h1>Do you want to confirm this address?</h1>
+    <p>
+        <%=address%>
+    </p>
+    <button onclick="window.location.href='/<%=wallet%>/transfer';">No</button>
+    <button onclick="window.location.href='/<%=wallet%>/transferConfirmed';">yes</button>
+</body>
+
+</html>
