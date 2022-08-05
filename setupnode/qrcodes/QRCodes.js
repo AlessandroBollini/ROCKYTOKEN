@@ -16,7 +16,7 @@ async function main() {
     const list = await db.findWallets();
     list.forEach(element => {
         const address = element.address;
-        generateQR("https://localhost:3000/" + address, address);
+        generateQR("https://burgertoken2.herokuapp.com/" + address, address);
     });
 }
 

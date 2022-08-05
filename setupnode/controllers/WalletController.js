@@ -6,8 +6,8 @@ exports.add = async (wallet) => {
         publicKey: wallet.publicKey,
         privateKey: wallet.privateKey,
         seedPhrase: wallet.seedPhrase,
-        received: false,
-        used: false
+        used: false,
+        image:"none"
     }
     await db.Wallet.create(data)
         .then(console.log("Wallet stored on the db"))
@@ -18,7 +18,7 @@ exports.add = async (wallet) => {
 
 exports.findWallets = async () => {
     let walletsList = [];
-    await db.Wallet.findAll()
+    await db.Wallet.findAll({where:{used:false}})
         .then((data) => {
             data.forEach(element => {
                 const wallet = {
@@ -26,8 +26,8 @@ exports.findWallets = async () => {
                     publicKey: element.publicKey,
                     privateKey: element.privateKey,
                     seedPhrase: element.seedPhrase,
-                    received: element.received,
-                    used: element.used
+                    used: element.used,
+                    image:element.image
                 }
                 walletsList.push(wallet);
             });
